@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATHLETE//01 — Performance Studio</title>
+<meta name="description" content="ATHLETE//01 — a new standard of personal training. Performance is a process.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">ATHLETE<span class="logo-slash">//</span>01</a>
+    <ul class="nav-links">
+      <li><a href="#programs" data-section="programs">PROGRAMS</a></li>
+      <li><a href="#coaches" data-section="coaches">COACHES</a></li>
+      <li><a href="#schedule" data-section="schedule">SCHEDULE</a></li>
+      <li><a href="#memberships" data-section="memberships">MEMBERSHIPS</a></li>
+      <li><a href="#stories" data-section="stories">RESULTS</a></li>
+    </ul>
+    <a href="#booking" class="nav-cta">BOOK YOUR SESSION <span>→</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
+  <div class="mobile-menu-inner">
+    <ul class="mobile-links">
+      <li><a href="#programs" data-num="01">PROGRAMS</a></li>
+      <li><a href="#coaches" data-num="02">COACHES</a></li>
+      <li><a href="#schedule" data-num="03">SCHEDULE</a></li>
+      <li><a href="#memberships" data-num="04">MEMBERSHIPS</a></li>
+      <li><a href="#stories" data-num="05">RESULTS</a></li>
+      <li><a href="#booking" data-num="06">BOOK NOW</a></li>
+    </ul>
+    <div class="mobile-meta">
+      <span>PERFORMANCE STUDIO</span>
+      <span>EST. 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2400&q=85" alt="Athlete training">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-side">
+    <span class="hero-side-text">PERFORMANCE STUDIO</span>
+    <span class="hero-side-line"></span>
+    <span class="hero-side-num">26</span>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-label">
+      <span class="label-dot"></span>
+      <span>PERFORMANCE IS A PROCESS.</span>
+      <span class="label-sep">/</span>
+      <span>EST. 2026</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="hero-line hero-line-1">BUILT</span>
+      <span class="hero-line hero-line-2">THROUGH</span>
+      <span class="hero-line hero-line-3"><em>DISCIPLINE.</em></span>
+    </h1>
+
+    <p class="hero-sub">A new standard of personal training.<br>Designed around your performance.</p>
+
+    <div class="hero-actions">
+      <a href="#programs" class="btn btn-primary">EXPLORE PROGRAMS <span>→</span></a>
+      <a href="#booking" class="btn btn-ghost">START TRAINING <span>→</span></a>
+    </div>
+  </div>
+
+  <div class="hero-status">
+    <div class="status-block">
+      <span class="status-label">SYSTEM STATUS</span>
+      <span class="status-value"><span class="status-dot"></span>ACTIVE</span>
+    </div>
+    <div class="status-block">
+      <span class="status-label">LOCATION</span>
+      <span class="status-value">STUDIO::01</span>
+    </div>
+  </div>
+
+  <a href="#performance" class="hero-scroll">
+    <span>SCROLL TO DISCOVER</span>
+    <span class="scroll-arrow">↓</span>
+  </a>
+</section>
+
+<!-- PERFORMANCE INDEX -->
+<section class="pi" id="performance">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">01 — PROFILE</span>
+      <h2 class="section-title">YOUR<br><em>PERFORMANCE</em><br>INDEX.</h2>
+      <p class="section-desc">Adjust the four dimensions to see your training profile. This is a demo tool — not a medical or diagnostic assessment.</p>
+    </div>
+
+    <div class="pi-layout">
+      <div class="pi-viz">
+        <svg class="pi-radar" viewBox="0 0 400 400" id="piRadar">
+          <defs>
+            <radialGradient id="radarFill" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#C6FF35" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#C6FF35" stop-opacity="0.05"/>
+            </radialGradient>
+          </defs>
+          <!-- rings -->
+          <g class="radar-rings">
+            <circle cx="200" cy="200" r="160"/>
+            <circle cx="200" cy="200" r="120"/>
+            <circle cx="200" cy="200" r="80"/>
+            <circle cx="200" cy="200" r="40"/>
+          </g>
+          <!-- axes -->
+          <g class="radar-axes">
+            <line x1="200" y1="40" x2="200" y2="360"/>
+            <line x1="40" y1="200" x2="360" y2="200"/>
+          </g>
+          <!-- data -->
+          <polygon id="radarPolygon" class="radar-polygon" points="200,100 300,200 200,300 100,200"/>
+          <g id="radarDots"></g>
+          <!-- labels -->
+          <g class="radar-labels">
+            <text x="200" y="28" text-anchor="middle">STRENGTH</text>
+            <text x="372" y="204" text-anchor="end">ENDURANCE</text>
+            <text x="200" y="384" text-anchor="middle">MOBILITY</text>
+            <text x="28" y="204" text-anchor="start">CONSISTENCY</text>
+          </g>
+        </svg>
+        <div class="pi-score">
+          <span class="pi-score-label">PERFORMANCE INDEX</span>
+          <div class="pi-score-value">
+            <span id="piScoreValue">55</span><span class="pi-score-max">/100</span>
+          </div>
+          <div class="pi-profile" id="piProfile">BALANCED ATHLETE</div>
+        </div>
+      </div>
+
+      <div class="pi-controls">
+        <div class="pi-controls-head">
+          <span class="pi-controls-label">TRAINING DIMENSIONS</span>
+          <span class="pi-controls-hint">DRAG SLIDERS TO ADJUST</span>
+        </div>
+
+        <div class="pi-sliders" id="piSliders"></div>
+
+        <div class="pi-desc">
+          <span class="pi-desc-label">PROFILE ANALYSIS</span>
+          <p id="piDescription">Adjust the sliders to generate your training profile and recommended focus areas.</p>
+        </div>
+
+        <button class="btn btn-ghost pi-reset" id="piReset">RESET PROFILE <span>↺</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">02 — PROGRAMS</span>
+      <h2 class="section-title">FIND YOUR<br><em>TRAINING</em><br>SYSTEM.</h2>
+    </div>
+
+    <div class="programs-list" id="programsList"></div>
+  </div>
+</section>
+
+<!-- COACHES -->
+<section class="coaches" id="coaches">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">03 — COACHES</span>
+      <h2 class="section-title">PEOPLE<br>BEHIND<br><em>THE PERFORMANCE.</em></h2>
+    </div>
+
+    <div class="coaches-grid" id="coachesGrid"></div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" id="schedule">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">04 — SCHEDULE</span>
+      <h2 class="section-title">THE WEEK<br><em>STARTS</em> HERE.</h2>
+    </div>
+
+    <div class="schedule-controls">
+      <div class="schedule-days" id="scheduleDays"></div>
+      <div class="schedule-filters" id="scheduleFilters">
+        <button class="filter-pill active" data-filter="all">ALL</button>
+        <button class="filter-pill" data-filter="strength">STRENGTH</button>
+        <button class="filter-pill" data-filter="functional">FUNCTIONAL</button>
+        <button class="filter-pill" data-filter="cardio">CARDIO</button>
+        <button class="filter-pill" data-filter="mobility">MOBILITY</button>
+      </div>
+    </div>
+
+    <div class="schedule-list" id="scheduleList"></div>
+  </div>
+</section>
+
+<!-- MEMBERSHIPS -->
+<section class="memberships" id="memberships">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">05 — MEMBERSHIPS</span>
+      <h2 class="section-title">ACCESS YOUR<br><em>NEXT LEVEL.</em></h2>
+    </div>
+
+    <div class="memberships-grid" id="membershipsGrid"></div>
+  </div>
+</section>
+
+<!-- CLIENT STORIES -->
+<section class="stories" id="stories">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">06 — CLIENT STORIES</span>
+      <h2 class="section-title">PROGRESS<br>HAS A <em>STORY.</em></h2>
+    </div>
+
+    <div class="stories-filters" id="storiesFilters">
+      <button class="filter-pill active" data-filter="all">ALL</button>
+      <button class="filter-pill" data-filter="strength">STRENGTH</button>
+      <button class="filter-pill" data-filter="endurance">ENDURANCE</button>
+      <button class="filter-pill" data-filter="mobility">MOBILITY</button>
+    </div>
+
+    <div class="stories-grid" id="storiesGrid"></div>
+  </div>
+</section>
+
+<!-- WEEKLY CHALLENGE -->
+<section class="challenge" id="challenge">
+  <div class="container">
+    <div class="challenge-inner">
+      <div class="challenge-left">
+        <span class="section-num">07 — WEEKLY CHALLENGE</span>
+        <h2 class="section-title">THIS WEEK'S<br><em>CHALLENGE.</em></h2>
+        <div class="challenge-name">FULL BODY PERFORMANCE</div>
+        <div class="challenge-meta">
+          <div><span>DURATION</span><strong>45 MIN</strong></div>
+          <div><span>LEVEL</span><strong>INTERMEDIATE</strong></div>
+          <div><span>STAGES</span><strong>04</strong></div>
+        </div>
+        <p class="challenge-desc">A full-body session combining strength, conditioning and controlled movement. Demo mode: each stage is compressed to ~20–60 seconds for preview purposes.</p>
+      </div>
+
+      <div class="challenge-right">
+        <div class="workout-ui" id="workoutUI">
+          <div class="workout-head">
+            <span class="workout-mode">DEMO SESSION</span>
+            <span class="workout-status" id="workoutStatus">READY</span>
+          </div>
+
+          <div class="workout-display">
+            <span class="workout-stage-label" id="workoutStageLabel">STAGE</span>
+            <span class="workout-stage-num" id="workoutStageNum">01 / 04</span>
+            <span class="workout-exercise" id="workoutExercise">WARM-UP</span>
+            <span class="workout-timer" id="workoutTimer">00:15</span>
+            <span class="workout-next" id="workoutNext">NEXT: SQUAT PATTERN</span>
+          </div>
+
+          <div class="workout-progress">
+            <div class="workout-progress-fill" id="workoutProgressFill"></div>
+          </div>
+
+          <div class="workout-controls">
+            <button class="btn btn-primary workout-btn" id="workoutStart">START WORKOUT</button>
+            <button class="btn btn-ghost workout-btn" id="workoutPause" hidden>PAUSE</button>
+            <button class="btn btn-ghost workout-btn" id="workoutReset" hidden>RESTART</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">08 — BOOKING</span>
+      <h2 class="section-title">YOUR NEXT<br>SESSION<br><em>STARTS HERE.</em></h2>
+    </div>
+
+    <div class="booking-layout">
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">FULL NAME <span>*</span></label>
+            <input type="text" id="fullName" required>
+            <span class="form-error" data-for="fullName"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">PHONE <span>*</span></label>
+            <input type="tel" id="phone" required>
+            <span class="form-error" data-for="phone"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">EMAIL <span>*</span></label>
+          <input type="email" id="email" required>
+          <span class="form-error" data-for="email"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="program">TRAINING PROGRAM <span>*</span></label>
+            <select id="program" required>
+              <option value="">— SELECT —</option>
+              <option>STRENGTH LAB</option>
+              <option>CONDITIONING</option>
+              <option>FUNCTIONAL MOVEMENT</option>
+              <option>MOBILITY SYSTEM</option>
+            </select>
+            <span class="form-error" data-for="program"></span>
+          </div>
+          <div class="form-group">
+            <label for="coach">PREFERRED COACH</label>
+            <select id="coach">
+              <option value="">— ANY —</option>
+              <option>ALEX MORGAN</option>
+              <option>DANIEL REED</option>
+              <option>EMMA CARTER</option>
+              <option>RYAN BLAKE</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">PREFERRED DATE <span>*</span></label>
+            <input type="date" id="date" required>
+            <span class="form-error" data-for="date"></span>
+          </div>
+          <div class="form-group">
+            <label for="membership">MEMBERSHIP <span>*</span></label>
+            <select id="membership" required>
+              <option value="">— SELECT —</option>
+              <option>BASE — €39/MO</option>
+              <option>PERFORMANCE — €69/MO</option>
+              <option>ELITE — €119/MO</option>
+            </select>
+            <span class="form-error" data-for="membership"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">ADDITIONAL MESSAGE</label>
+          <textarea id="message" rows="3" placeholder="Anything we should know?"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit">SEND REQUEST <span>→</span></button>
+
+        <p class="form-note">This is a demo form. No real booking or payment is processed.</p>
+      </form>
+
+      <div class="booking-success" id="bookingSuccess" hidden>
+        <div class="success-mark">✓</div>
+        <span class="success-label">DEMO REQUEST</span>
+        <h3>REQUEST LOGGED</h3>
+        <p>This is a demonstration — no real booking was made. Here's what you selected:</p>
+        <div class="success-summary">
+          <div><span>PROGRAM</span><strong id="sProgram">—</strong></div>
+          <div><span>COACH</span><strong id="sCoach">—</strong></div>
+          <div><span>DATE</span><strong id="sDate">—</strong></div>
+          <div><span>MEMBERSHIP</span><strong id="sMembership">—</strong></div>
+        </div>
+        <button class="btn btn-ghost" id="successReset">START OVER <span>↺</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-bg">
+    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=2400&q=85" alt="Athlete">
+  </div>
+  <div class="final-cta-overlay"></div>
+  <div class="container final-cta-inner">
+    <h2 class="final-cta-title">NO SHORTCUTS.<br><em>JUST PROGRESS.</em></h2>
+    <p class="final-cta-sub">Your performance is built one session at a time.</p>
+    <a href="#booking" class="btn btn-primary final-cta-btn">START YOUR JOURNEY <span>→</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">ATHLETE<span class="logo-slash">//</span>01</div>
+        <p class="footer-tagline">PERFORMANCE IS A PROCESS.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <span class="footer-col-title">NAVIGATE</span>
+          <a href="#programs">PROGRAMS</a>
+          <a href="#coaches">COACHES</a>
+          <a href="#schedule">SCHEDULE</a>
+          <a href="#memberships">MEMBERSHIPS</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">SOCIAL</span>
+          <a href="#">INSTAGRAM ↗</a>
+          <a href="#">TIKTOK ↗</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">LOCATION</span>
+          <span>STUDIO::01</span>
+          <span>YOUR CITY</span>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">STATUS</span>
+          <span class="footer-active"><span class="status-dot"></span>ACTIVE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 ATHLETE//01</span>
+      <span>ALL SYSTEMS OPERATIONAL</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SHARED MODAL -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
